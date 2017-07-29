@@ -642,7 +642,7 @@ module AlienTube {
          */
         private getVideoSearchString(videoID : string) {
             if (Application.currentMediaService() === Service.YouTube) {
-                return encodeURI(`(url:3D${videoID} OR url:${videoID}) (site:youtube.com OR site:youtu.be)`);
+                return encodeURI(`url:3D${videoID} OR url:${videoID}`);
             } else if (Application.currentMediaService() === Service.Vimeo) {
                 return encodeURI(`url:https://vimeo.com/${videoID} OR url:http://vimeo.com/${videoID}`);
             }
